@@ -1,0 +1,42 @@
+table{
+  width: 100%;
+  height: 15em;
+  margin-bottom: 2em;
+}
+td{
+  width: 30%;
+}
+
+tbody tr:hover {background-color: #ccff99 !important; }
+
+table, th, td{
+  /*border: 1px solid black;*/
+  border: thin solid black;
+  /* collapse: Convierte los bordes doble en uno solo*/
+  border-collapse: collapse;
+  text-align: center;
+  vertical-align: middle;
+}
+.tabla1 tfoot{
+  font-style: italic;
+  background-color: rgb(126, 198, 204);
+}
+.vacío{
+  border-width: 0;
+}
+.característica{ width: 10%;}
+.godot, .unreal{ background: #909090;}
+.unity{ background: white; }
+
+.tabla2 tbody tr:nth-child(even){
+  background: rgb(130, 230, 99);
+}
+
+.tabla2 thead{
+  background-color: rgb(79, 198, 43);
+}
+
+table.tabla2, .tabla2 th, .tabla2 td {
+  border: none;
+  border-bottom: thin solid black;
+}

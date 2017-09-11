@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DOM API</title>
+  <link rel="stylesheet" href="css/est.css" />
+</head>
+<body>
+  <!-- CÓDIGO DE JAVASCRIPT -->
+  <script>
+    var img = document.createElement('img');
+    img.src="images/avatar.png";
+    document.body.appendChild(img);
+
+    var video = document.createElement('video');
+    video.src = 'video/Volcano_Diver_medium.mp4';
+    video.controls = false;
+    video.id="video";
+    document.body.appendChild(video);
+  </script>
+  <p>
+    <button onclick="play();">Reproducir</button>
+    <button onclick="pause();">Pausa</button>
+    <button onclick="rewind();">Reiniciar</button>
+  </p>
+  <script>
+    video = document.querySelector("#video");
+    function play(){
+      video.play();
+    }
+    function pause(){
+      video.pause();
+    }
+    function rewind(){
+      video.currentTime=0;
+    }
+  </script>
+</body>
+</html>

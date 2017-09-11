@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hola Javascript</title>
+    <link rel="stylesheet" href="css/est.css" />
+  </head>
+  <body>
+    <header id="headerItem">
+      <h1>Hola Javascript</h1>
+      <h2>Nos vemos de nuevo. Después de tantos años</h2>
+    </header>
+    <section>
+      <p>
+        Distinctio rem repellendus quasi sed ad. Quisquam pariatur sapiente placeat sed illo. Corrupti labore est voluptas sint ut facilis velit illum. Perferendis sit ratione deserunt assumenda minima.
+      </p>
+      <button onclick="changeHeader();">Click here</button>
+    </section>
+    <script type="text/javascript">
+      var previousHeader = document.getElementById('headerItem').innerHTML;
+      var nuevoHeader = '<em>Nuevo header</em>'
+      var currentHeader = previousHeader;
+      function changeHeader(){
+        if(currentHeader == nuevoHeader){
+          currentHeader = previousHeader;
+        }else{
+          currentHeader = nuevoHeader;
+        }
+        document.getElementById('headerItem').innerHTML = currentHeader;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.actividad{
+  margin: 3rem;
+}
+.actividad h1{
+  text-align: center;
+}
+.actividad ol{
+  margin-top: 50px;
+}
+.actividad ol li{
+  margin-left: 20px;
+  line-height: 10px;
+}

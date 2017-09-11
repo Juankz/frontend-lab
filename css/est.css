@@ -1,0 +1,67 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: rgb(22, 230, 138);
+}
+.cabeza, .seccion1 {
+  padding: 10px;
+  padding-left: 20px;
+  margin: 0;
+}
+.cabeza {
+  background-color: rgb(255, 225, 56);
+  color: gray;
+}
+.cabeza h1{
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 0;
+}
+
+.cabeza h2{
+  text-decoration: underline;
+}
+
+button{
+  padding: 10px 70px;
+  font-weight: bold;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 20px;
+  transition: all 0.2s ease-in;
+}
+
+button:hover{
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.cabeza button{
+  color: white;
+  background-color: gray;
+  border-color: white;
+}
+.cabeza button:hover{
+  background-color: darkgray;
+}
+.cabeza button:active{
+  color: gray;
+  background-color: lightgray;
+}
+
+.seccion1{
+  background-color: rgb(139, 10, 149);
+  text-align: center;
+}
+
+.seccion1 button{
+  color: gray;
+  background-color: white;
+  /*! text-align: center; */
+}
+
+.seccion1 button:active{
+  color: white;
+  background-color: darkgray;
+}

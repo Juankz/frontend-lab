@@ -1,0 +1,52 @@
+html{
+  background-image: url("../images/164.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ddb999;
+}
+html, body{
+  font-family: "Helvetica", sans-serif;
+}
+h1, h2{
+  text-align: center;
+}
+.p1, .p2, .p3{
+  text-align: justify;
+  font-weight: bold;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /* No se aconseja dar ancho a elementos, con padding y border se puede lograr buenos resultados y el ancho se deja al layout*/
+  width: 15em;
+  padding: 20px;
+  border-radius: 10px;
+}
+.p1, .p2{
+  background-image: url("../images/avatar.png");
+  background-repeat: space;
+  background-color: white;
+  border: 4px double #949494;
+}
+
+.p2{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.p2:hover{
+  color:red;
+}
+.p2:active{
+  color:green
+}
+
+.p3{
+  background-color: grey;
+  border: hidden;
+  padding: 24px;
+}
+.p1:hover{
+  color: yellow;
+}
+.p3:hover{
+  cursor:help;
+}

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta lang="es" />
+  <title>Tablas en HTML</title>
+  <link rel="stylesheet" href="css/tablas.css" />
+</head>
+<body>
+<main>
+  <table class="tabla1">
+    <caption>
+      <p>
+        Tabla 1. Comparación entre motores de Juego
+      </p>
+    </caption>
+    <colgroup>
+      <col class="característica" span="1"/>
+      <col class="godot" span="1" />
+      <col class="unity" span="1" />
+      <col class="unreal" span="1" />
+    </colgroup>
+    <!-- Al definir thead tbody y tfoot puedo deslizar(scroll) cada parte de forma independiente y ayuda a los asistentes de lectura-->
+    <thead>
+      <tr>
+        <th class="vacío"></th>
+        <th scope="col">GODOT</th>
+        <th scope="col">UNITY 3D</th>
+        <th scope="col">UNREAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Licencia</th>
+        <td>Software Libre</td>
+        <td colspan="2">Privativo</td>
+      </tr>
+      <tr>
+        <th scope="row">Capacidad 3D</th>
+        <td>No lo suficientemente madura aún</td>
+        <td>Muy buena</td>
+        <td>¡Excelente! Altísima calidad</td>
+      </tr>
+      <tr>
+        <th scope="row">Scripting</th>
+        <td>GDScript, VisualScript, C#, Python</td>
+        <td>C#, Javascript</td>
+        <td>C++, VisualScript</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">
+          Conclusión: Usa el motor de tu preferencia
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+  <table class="tabla2">
+    <caption>
+      <p>
+        Tabla 2. Estilo zebra para tablas
+      </p>
+    </caption>
+    <!-- Al definir thead tbody y tfoot puedo deslizar(scroll) cada parte de forma independiente y ayuda a los asistentes de lectura-->
+    <thead>
+      <tr>
+        <th class="vacío"></th>
+        <th scope="col">GODOT</th>
+        <th scope="col">UNITY 3D</th>
+        <th scope="col">UNREAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Licencia</th>
+        <td>Software Libre</td>
+        <td colspan="2">Privativo</td>
+      </tr>
+      <tr>
+        <th scope="row">Capacidad 3D</th>
+        <td>No lo suficientemente madura aún</td>
+        <td>Muy buena</td>
+        <td>¡Excelente! Altísima calidad</td>
+      </tr>
+      <tr>
+        <th scope="row">Scripting</th>
+        <td>GDScript, VisualScript, C#, Python</td>
+        <td>C#, Javascript</td>
+        <td>C++, VisualScript</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">
+          Conclusión: Usa el motor de tu preferencia
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+  <p>
+    <h3>Más recursos</h3>
+    <a href="https://www.tjvantoll.com/demos/2012-11-10/">Excelente ejemplo de tabla</a>
+  </p>
+</main>
+</body>
+</html>

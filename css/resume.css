@@ -1,0 +1,75 @@
+body{
+  background-color: #fcfcfc;
+  padding: 1rem 2rem;
+  font-family: helvetica;
+}
+
+header, h3{
+  color: #1f9e51;
+}
+
+h1{
+  text-transform: uppercase;
+}
+
+h3{
+  font-variant: small-caps;
+  border-bottom: 1px solid gray;
+}
+
+h4{
+  color: #383838;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+ul{
+  list-style: none;
+}
+
+p{
+  margin-bottom: 1em;
+}
+
+header div{
+  float: left;
+}
+
+header section{
+  float: right;
+  margin-top: 1rem;
+  text-align: right;
+  line-height: 1.5em;
+}
+
+.right, .work-experience{
+  /*! background-color: #fff; */
+  padding: 1rem;
+  border: 1px solid #1f9e51;
+  border-radius: 4px;
+}
+
+.work-experience{
+  width: 60%;
+  clear: left;
+  height: 135.6%;
+}
+
+.right{
+  margin-bottom: 1rem; 
+  width: 30%;
+  float: right;
+  clear: both;
+}
+
+.position{
+  position: relative;
+  left: 6%;
+  bottom: 2.5rem;
+  border-left: 1px solid #1f9e51;
+  padding-left: 1em;
+}
+
+.year{
+  color: #383838;
+}

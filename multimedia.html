@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta lang="es" />
+  <title>Multimedia en HTML5</title>
+</head>
+<body>
+  <section class="audio">
+    <div style="width: 100%; height: 20rem;">
+      <audio src="audio/homero.mp3" controls=""  preload="auto">El navegador no soporta audio</audio>
+    </div>
+    <audio src="http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3" controls="" loop preload="auto">El navegador no soporta audio</audio>
+
+    <audio controls>
+      <source src="https://courses.edx.org/asset-v1:W3Cx+HTML5.0x+1T2016+type@asset+block@splash.wav" type="audio/wav">
+      <source src="https://courses.edx.org/asset-v1:W3Cx+HTML5.0x+1T2016+type@asset+block@splash.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+  </section>
+  <section class="video">
+    <video src="video/Volcano_Diver_medium.mp4" type="video/mp4" autoplay="" width="320" height="240" muted="" loop="">El navegador no soporta video</video>
+    <video src="video/Volcano_Diver_medium.mp4" type="video/mp4" controls="" width="320" height="240">El navegador no soporta video</video>
+    <br />
+    <video controls width="640" height="480">
+      <source src="video/week2.mp4" type="video/mp4" />
+      <track src="subtitles/test.vtt" kind="subtitles" srclang="en" label="english" default/>
+      El navegador no soporta video
+    </video>
+    <br />
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/X8vVFzeI_Ms" frameborder="0" allowfullscreen></iframe>
+  </section>
+</body>
+</html>

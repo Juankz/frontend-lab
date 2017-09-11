@@ -1,0 +1,67 @@
+/* Cambiemos un poco el estilo de los párrafos */
+html, body {
+  /* Aquí estpy dando un tamaño base */
+  font-size: 100%;
+  font-weight: normal;
+  font-family: "Roboto", serif;
+}
+h1 {
+  color: red;
+}
+h2{
+  color: #ff9900;
+  text-decoration: line-through;
+}
+footer, p {
+  color: #005; /* Azul */
+  line-height: 1;
+}
+/*
+Descendientes directos.
+Por ejemplo, este solo modifica elementos de énfasis directamente bajo un párrafo <p>
+no modifica énfasis dentro de una cita <q> que esté dentro de un párrafo <p>
+*/
+p > em{
+  color: green;
+  font-style: normal;
+}
+.subtitulo{
+  margin-left: 2rem;
+}
+#seccion1{
+  font-weight: bolder;
+}
+#seccion2{
+  font-style: oblique;
+  text-align: justify;
+}
+.seccion-basica{
+  margin-right: 20%;
+  margin-left: 2rem;
+}
+/* Ejemplo de ambas condiciones obligatorias */
+blockquote.cita-celebre{
+  font-weight: bold;
+}
+/* Ejemplo con listas, en este caso se aplica tanto a listas ordenadas como desordenadas */
+li{
+  list-style-type: disc;
+  /* Si remuevo el comentario de la línea siguiente todas las listas tendrán "numeración" de disco */
+  /*list-style-type: disc !important;*/
+  list-style-position: inside;
+}
+/* Ejemplo de selector más específico en cuanto a listas */
+div ol li{
+  list-style-type: decimal;
+}
+.prioridad {
+  color: darkblue;
+  font-style: italic;
+}
+footer{
+  /* Cambio el tamaño con respecto al tamaño base */
+  /*font-size: 0.75rem;*/
+  /* Cambio el tamaño con respecto al tamaño del padre */
+  font-size: small;
+  font-family: sans-serif;
+}

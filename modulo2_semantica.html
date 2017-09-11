@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta lang="es">
+  <title>Semántica</title>
+</head>
+<body>
+  <header>
+    <h1>¿Que es la semántica?</h1>
+    <p>La semántica en sí no contribuye a estilizar la página web, sino que crea una estructura sólida del documento web</p>
+  </header>
+  <nav>
+    <ul>
+      <p>Tabla de contenidos</p>
+      <li><a href="#significado">Significado</a></li>
+      <li><a href="#atributos">Atributos</a></li>
+      <li><a href="#elementos">Elementos Semánticos</a></li>
+      <li><a href="#imágenes">Uso de imágenes</a></li>
+      <li><a href="#detalles">Enlaces Útiles</a></li>
+    </ul>
+  </nav>
+  <section id="significado">
+    <h3>Significado</h3>
+    Cuando hablamos de semántica, estamos hablando de significado. La semática me ayuda a definir que quiere
+    decir un elemento determinado en HTML
+  </section>
+  <section id="atributos">
+    <h3>Atributos</h3>
+    Los atributos son propiedades de un elemento, existen atributos globales (Ej: <em>id</em> ó <em>class</em>)
+     y locales por ejemplo <em>src</em> en la etiqueta &lt;img&gt;
+  </section>
+  <article id="elementos">
+      <section>
+        <h3>Elementos Semánticos</h3>
+        La mayoría de elementos HTML son semánticos. Algunos importantes son:
+        <ul>
+          <li>
+            <h4>&lt;header&gt;</h4>
+            <p>Area para contenido introductorio, contiene información importante acerca del contenido de la página web, una introducción,
+               logo y nombre del sitio, no tiene que ir siempre al principio</p>
+          </li>
+          <li>
+            <h4>&lt;nav&gt;</h4>
+            <p>Contiene enlaces para poderse mover por el sitio. Un sitio puede tener varios elementos de navegación</p>
+          </li>
+          <li>
+            <h4>&lt;section&gt;</h4>
+            <p>Como su nombre lo sugiere, delimita secciones de un documento, por ejemplo capítulos.
+               Usado tipicamente en contenido que no tiene sentido por sí mismo</p>
+          </li>
+          <li>
+            <h4>&lt;article&gt;</h4>
+            <p>Define contenido independiente que tiene sentido por sí mismo fuera del documento. Por ejemplo un blog post</p>
+          </li>
+          <li>
+            <h4>&lt;aside&gt;</h4>
+            <p>Contenido adicional cuya función es ayudar al contenido principal pero no hace parte de este,
+               por ejemplo una explicación pequeña sobre un término del texto principal</p>
+          </li>
+          <li>
+            <h4>&lt;footer&gt;</h4>
+            <p>Contiene información del autor, copyright, información de contacto y en ocasiones un menú</p>
+          </li>
+          <li>
+            <details id="detalles">
+              <summary>&lt;details&gt;</summary>
+              <p>Contenido que puede ser mostrado u ocultado por el usuario</p>
+              <p>Dentro de la etiqueta &lt;summary&gt; se coloca el texto que se verá siempre visible</p>
+            </details>
+          </li>
+          <li>
+            <h4>&lt;figure&gt; y &lt;figcaption&gt;</h4>
+            <p>Une una imagen con una descripción de la imagen</p>
+            <figure>
+              <img src="http://img2.rnkr-static.com/list_img_v2/14710/1714710/C480/the-best-megan-fox-characters.jpg" alt="Imagen de Megan Fox" title="Megan Fox">
+              <figcaption>Fig1. Aprendiendo a usar imágenes</figcaption>
+            </figure>
+          </li>
+          <li>
+            <h4>&lt;mark&gt;</h4>
+            Efectivamente sirve para <mark>Resaltar texto<mark>
+          </li>
+          <li>
+            <h4>&lt;code&gt;</h4>
+            <code>if(usuario=UD){<br>
+              print("Que persona tan inteligente")<br>
+            }</code>
+          </li>
+        </ul>
+        <p> He aquí un excelente ejemplo de como usar correctamente los elementos semánticos:
+          <a href="https://jsfiddle.net/y3adugze/5/?utm_source=website&utm_medium=embed&utm_campaign=y3adugze" target="_blank">Link</a>
+          <br>
+          <em>Note que el enlace anterior se abre en una nueva página</em>
+        </p>
+        </section>
+        <section>
+          <h3>Elementos no semánticos</h3>
+          <p>
+            Existen dos elementos no semánticos principales:
+            <ul>
+              <li>
+                <h4>&lt;div&gt;</h4>
+                <p>Es un <b>contenedor</b> de un bloque de contenido</p>
+              </li>
+              <li>
+                <h4>&lt;span&gt;</h4>
+                <p>Es un <b>contenedor</b> de una línea de contenido</p>
+              </li>
+              <p>
+                Ambos casos se usan para facilitar el uso de estilos agrupando ciertos elementos o manipulación de
+                elementos a través de javascript
+              </p>
+          </p>
+        </section>
+  </article>
+  <section id="imágenes">
+    <h3> Uso imagenes y texto alternativo </h3>
+    <section>
+      <p>Imagen decorativa. Texto altenativo vacío</p>
+      <img src="images/abstract.jpg" alt="">
+      <br> <a href="images/abstract.jpg" download>Descargar imágen</a>
+    </section>
+    <section>
+      <p>Imagen explicativa. Texto altenativo describe la imagen. También tiene tooltip y tamaño ajustado</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Metro_do_Porto.svg/1361px-Metro_do_Porto.svg.png" width="40%" alt="Rutas de metro" title="Rutas de metro">
+    </section>
+    <section>
+      <p>Imagen con texto. Texto altenativo es igual al texto de la imagen</p>
+      <img src="https://c1.staticflickr.com/9/8367/8442477572_5a4a137f9f.jpg" alt="Ask yourself if what you're doing today is getting you closer to where you want to be tomorrow">
+    </section>
+  </section>
+  <aside>
+    <hr>
+    <blockquote>Dichos elementos semánticos se están usando en esta página</blockquote>
+  </aside>
+  <footer>
+    Creado por Juan Velandia para aprender HTML adecuadamente
+    <address>
+      Email del autor: <a href="mailto:juanvelandia@protonmail.com?Subject=Hola...">juanvelandia@protomail.com</a><br>
+      <strong>Es una pésima idea dejar los emails expuestos de semejante forma. Puedes llegar a recibir mucho spam</strong><br>
+      Website del autor: juankz.github.io
+    </address>
+  </footer>
+</body>
+</html>

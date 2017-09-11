@@ -1,0 +1,9 @@
+.actividad h1{
+  color: darkred;
+  font-family: "Ubuntu", cursive;
+}
+.actividad ol li{
+  font-family: monospace;
+  list-style-type: lower-latin;
+  list-style-image: url("../images/my_triangle.png");
+}
