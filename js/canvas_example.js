@@ -5,9 +5,11 @@ function init(){
     context = canvas.getContext('2d');
     canvas2 = document.getElementById('canv2');
     ctx = canvas2.getContext('2d');
-    drawApple(200,200,Math.PI,'red');
-    drawApple(400,200,Math.PI*1.1,'green');    
+    drawApple(150,300,Math.PI,'red');
+    drawApple(350,300,Math.PI*1.1,'green');    
     drawChart([1,2,3,5,6,4,3,2]);
+    drawTitle(ctx,"Histograma");
+    drawTitle(context,"Manzanas");
 }
 
 function drawApple(x,y,angle,color){
@@ -57,9 +59,8 @@ function drawApple(x,y,angle,color){
 function drawChart(elements){
     var scale = 30;
     ctx.save();
-    ctx.translate(500,300);
-    ctx.rotate(Math.PI);
-    ctx.scale(scale,scale);
+    ctx.translate(100,300);
+    ctx.scale(scale,-scale);
     ctx.fillStyle='blue';
     for(var i = 0; i<elements.length;i++){
         ctx.fillRect(i,0,1,elements[i]);
@@ -71,5 +72,21 @@ function drawChart(elements){
     for(var i = 0; i<elements.length;i++){
         ctx.fillText(elements[i],i,1);
     }
+    ctx.font = 'normal normal 1px Calibri';
     ctx.restore();
+}
+
+function drawTitle(c, title){
+    c.save();
+    c.translate(0,0);
+    c.fillStyle = "gray";
+    c.strokeStyle = "black";
+    c.lineWidth = 2;
+    c.textBaseline="top"; //Under the baseline
+    c.font="normal bold 50px Calibri";
+    var textWidth = c.measureText(title).width;
+    c.fillText(title,250-(textWidth/2),10);
+    c.textAlign = "center";
+    c.strokeText(title,250,10);
+    c.restore();
 }
