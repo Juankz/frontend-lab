@@ -1,4 +1,4 @@
-var canvas, context, ctx, canvas2;
+var canvas, context, ctx, canvas2, video, videoctx;
 
 /*window.onload = function () {
     var c = document.getElementById("canv3");
@@ -15,24 +15,38 @@ function init(){
     drawApple(150,300,Math.PI,'red');
     drawApple(350,300,Math.PI*1.1,'green');    
     drawChart([1,2,3,5,6,4,3,2]);
-    drawTitle(ctx,"Histograma");
-    drawTitle(context,"Manzanas");
     
+    /*Dibujar imagen en canvas*/
     var c = document.getElementById("canv3");
     var ct = c.getContext('2d');
     var image = new Image();
     image.onload = function (){
         ct.drawImage(image,0,0,500,500);
+        drawTitle(ct,"Imagen");
     }
     image.src="https://krita.org/wp-content/themes/krita-org-theme/images/gallery/grumpy_cat_by_peileppe-d5g98qv.jpg";
     
+    
     c = document.getElementById('canv4');
-    var newctx = c.getContext('2d');
-    image2 = new Image();
-    image2.onload = function (){
-        newctx.drawImage(image2,0,0,500,500);
-    }
-    image2.src="https://krita.org/wp-content/themes/krita-org-theme/images/gallery/cranesicono.jpg";
+    videoctx = c.getContext('2d');
+    
+    /*Video en canvas*/
+    /*var video = new Video();*/
+    video = document.createElement('video');
+    video.src="video/Volcano_Diver_medium.mp4"
+    video.autoplay = true;
+    video.muted = true;
+    
+    
+    drawTitle(ctx,"Histograma");
+    drawTitle(context,"Manzanas");
+    drawTitle(videoctx,"Video")
+    
+    setInterval("updateVideo()",16); //calls update each 1/60s
+}
+
+function updateVideo(){
+    videoctx.drawImage(video,0,125,500,500*9/16);
 }
 
 function drawApple(x,y,angle,color){
