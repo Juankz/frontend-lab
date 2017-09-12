@@ -1,5 +1,12 @@
 var canvas, context, ctx, canvas2;
 
+/*window.onload = function () {
+    var c = document.getElementById("canv3");
+    var ct = c.getContext('2d');
+    var image = loadImage("https://krita.org/wp-content/themes/krita-org-theme/images/gallery/butterfly_shout_by_ico_dy-d53me1n.jpg");
+    image.onload = drawImage(ct,image);
+}*/
+
 function init(){
     canvas = document.getElementById('canv');
     context = canvas.getContext('2d');
@@ -10,6 +17,22 @@ function init(){
     drawChart([1,2,3,5,6,4,3,2]);
     drawTitle(ctx,"Histograma");
     drawTitle(context,"Manzanas");
+    
+    var c = document.getElementById("canv3");
+    var ct = c.getContext('2d');
+    var image = new Image();
+    image.onload = function (){
+        ct.drawImage(image,0,0,500,500);
+    }
+    image.src="https://krita.org/wp-content/themes/krita-org-theme/images/gallery/grumpy_cat_by_peileppe-d5g98qv.jpg";
+    
+    c = document.getElementById('canv4');
+    var newctx = c.getContext('2d');
+    image2 = new Image();
+    image2.onload = function (){
+        newctx.drawImage(image2,0,0,500,500);
+    }
+    image2.src="https://krita.org/wp-content/themes/krita-org-theme/images/gallery/cranesicono.jpg";
 }
 
 function drawApple(x,y,angle,color){
@@ -61,8 +84,12 @@ function drawChart(elements){
     ctx.save();
     ctx.translate(100,300);
     ctx.scale(scale,-scale);
-    ctx.fillStyle='blue';
     for(var i = 0; i<elements.length;i++){
+        if(i%2 == 0){
+            ctx.fillStyle = 'lightblue';
+        }else{
+            ctx.fillStyle = 'lightgreen';
+        }
         ctx.fillRect(i,0,1,elements[i]);
         console.log(elements[i]);
     }
@@ -89,4 +116,8 @@ function drawTitle(c, title){
     c.textAlign = "center";
     c.strokeText(title,250,10);
     c.restore();
+}
+
+function drawImage(ctx,image){
+    ctx.drawImage(image,0,0,500,500);
 }
