@@ -50,8 +50,7 @@ function updateVideo(){
 }
 
 function drawApple(x,y,angle,color){
-    //GOOD PRACTICE
-    context.save();
+    context.save(); //GOOD PRACTICE
     var scl = 1.2;
     context.translate(x,y);
     context.rotate(angle);
@@ -62,7 +61,7 @@ function drawApple(x,y,angle,color){
     context.arc(0, 0, 70, 0, 2 * Math.PI);
     context.stroke();
     //context.fill();
-    context.closePath();
+    context.beginPath(); //Borra el buffer sin modificar el contexto
     
     context.strokeStyle='green';
     context.beginPath();
@@ -72,7 +71,7 @@ function drawApple(x,y,angle,color){
     context.lineTo(0,55);   
     context.stroke();
 
-    context.restore();
+    context.restore(); //GOOD PRACTICE
 
     // // set the global context values
     //  context.lineWidth=5;
