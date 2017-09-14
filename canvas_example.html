@@ -12,13 +12,24 @@
         </style>
     </head>
     <body onload="init()">
-        <section>
+        <header>
+            <h1>Experimentos con Canvas</h1>
             <p>A continuación hay 4 ejemplos del uso de canvas.</p>
             <p> Renderizado inmediato y modo de dibujo por caminos; un histograma a partir de algunos datos; dibujar imágenes cargadas en javascript y por último mostrar un video cargado a través de javascript directamente en canvas (Lo cual es útil si uno no quiere que el video sea descargado)</p>
+        </header>
+        <section class="lab">
             <canvas id="canv" width="500" height="500"></canvas>
             <canvas id="canv2" width="500" height="500"></canvas>
             <canvas id="canv3" width="500" height="500"></canvas>
             <canvas id="canv4" width="500" height="500"></canvas>
+            <canvas id="canv5" width="500" height="500"></canvas>
         </section>
+        <footer>
+            <h3>NOTAS:</h3>
+            <ul>
+                <li>Los arcos por defecto se dibujan en sentido horario empezando en primer cuadrante</li>
+                <li>El renderizado por caminos es superior en velocidad al renderizado inmediato</li>
+            </ul>
+        </footer>
     </body>
 </html>
