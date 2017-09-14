@@ -1,4 +1,4 @@
-var canvas, context, ctx, canvas2, video, videoctx;
+var canvas, context, ctx, canvas2, ctx5, video, videoctx;
 
 /*window.onload = function () {
     var c = document.getElementById("canv3");
@@ -37,10 +37,14 @@ function init(){
     video.autoplay = true;
     video.muted = true;
     
+    c = document.getElementById("canv5");
+    ctx5 = c.getContext('2d');
+    drawPaths();
     
     drawTitle(ctx,"Histograma");
     drawTitle(context,"Manzanas");
     drawTitle(videoctx,"Video")
+    drawTitle(ctx5,"Paths, arcTo")
     
     setInterval("updateVideo()",16); //calls update each 1/60s
 }
@@ -65,10 +69,11 @@ function drawApple(x,y,angle,color){
     
     context.strokeStyle='green';
     context.beginPath();
+    /*A continuación solo dibujo dos líneas y utilizo closePath() para cerrar el lazo*/
     context.moveTo(0,55);
     context.lineTo(0,100);
     context.lineTo(7,100);
-    context.lineTo(0,55);   
+    context.closePath();   
     context.stroke();
 
     context.restore(); //GOOD PRACTICE
@@ -133,4 +138,20 @@ function drawTitle(c, title){
 
 function drawImage(ctx,image){
     ctx.drawImage(image,0,0,500,500);
+}
+
+function drawPaths(){
+    ctx5.save();
+    ctx5.translate(-75,75); //Estaba muy arriba así que lo bajé un poco
+    ctx5.fillStyle="#b7af12";
+    ctx5.strokeStyle="#b75c12";
+    ctx5.lineWidth=5;
+    ctx5.moveTo(300,250);
+    ctx5.arcTo(400,250,400,0,50);
+    ctx5.arcTo(400,100,250,100,50);
+    ctx5.arcTo(250,100,250,250,50);
+    ctx5.arcTo(250,250,400,250,50);
+    ctx5.fill();
+    ctx5.stroke(); //Stroke después de fill para visualizar el borde
+    ctx5.restore();
 }
