@@ -36,7 +36,7 @@ canvas.addEventListener('mousemove',function(ev){
     y = ev.clientY - rect.top;
 });
 
-canvas.addEventListener('mousedown',function(ev){
+window.addEventListener('mousedown',function(ev){
     for(var i = 0; i < maxCircles; i++){
         var c = new Circle(0,0);
         c.x = ev.clientX - rect.left + 50*Math.random() -25;
@@ -55,9 +55,9 @@ requestAnimationFrame(animationLoop);
 
 function getRandomDirection(){
     if(Math.random()>0.5){
-        return 1;
+        return 1*Math.random();
     }else{
-        return -1;
+        return -1*Math.random();;
     }
 }
 
