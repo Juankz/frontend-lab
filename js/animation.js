@@ -1,7 +1,7 @@
 var canvas, context;
 var x,y,w,h;
 var r = 6;
-var color = "red";
+var color = "violet";
 var time=0;
 var maxCircles=10;
 var circles = [];
@@ -86,7 +86,7 @@ function animationLoop(delta){
             circles4rm.push(c);
         }
         context.strokeStyle = "rgba("+c.color.r+","+c.color.g+","+c.color.b+","+c.a+")";
-        context.arc(c.x,c.y,c.r+20*c.t,0,2*Math.PI);
+        context.arc(c.x,c.y,c.r+50*c.t,0,2*Math.PI);
         context.stroke();
     });
     context.beginPath();
