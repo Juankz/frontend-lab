@@ -1,0 +1,96 @@
+body, html{
+    margin: 0;
+    background: #21b7f2;
+}
+body {
+    padding: 1rem;
+    vertical-align: middle;
+}
+ul{
+    list-style: none;
+    list-style-position: inside;
+    vertical-align: top;
+    padding-left: 0;
+    margin-top: 0;
+}
+.registro * {
+/*    border: 1px solid red;*/
+}
+label{
+    position: relative;
+    display: inline-block;
+    width: 8em;
+    padding: 10px;
+    text-align: left;
+}
+li input{
+    background: white;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    width: 16em;
+}
+li input:required:valid{
+    border-color: #1cb700;
+    box-shadow: 0px 0px 5px #1cb700;
+}
+li input:required:invalid{
+    border-color: red;
+    box-shadow: 0px 0px 5px red;
+}
+li input:focus{
+    border-color: darkcyan!important;
+    box-shadow: 0 0 5px darkcyan !important;
+}
+canvas{
+    background: white;
+    display: none;
+}
+.registro{
+    background: #21b7f2;
+    text-align: center;
+    width: 25rem;
+    height: 18rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 0;
+    padding-top: 0;
+    margin: auto auto;
+    position: absolute;
+    top:calc(50vh - 9rem);
+    left: 35%;
+    box-shadow: 0 10px 20px;
+}
+
+.registro h1{
+    background: linear-gradient(#21b7f2, #1fa7dd);
+    margin: 0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    
+   
+}
+
+.registro button{
+    background: #ffffff;
+    color: black;
+    /*! background: #17d8a5; */
+    padding: 5px;
+    width: 50%;
+    border: #17d8a5 2px solid;
+    border-radius: 5px;    
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: all 0.25s ease-out;
+    transition: box-shadow 0;
+}
+.registro button:hover{
+    background: #17d8a5;
+}
+
+.registro button:active{
+    box-shadow: 0 3px 3px;
+}

@@ -1,10 +1,40 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>EJemplo de formas</title>
+        <title>Ejemplo de formas</title>
+        <link rel="stylesheet" href="css/formas.css">
+        <script>
+            function checkPass(){
+                var pass1 = document.getElementById("pass");
+                var pass2 = document.getElementById("pass2");
+                console.log(pass1.value == pass2.value);
+                return pass1.value == pass2.value;                
+            }
+        </script>
     </head>
     <body>
-        <canvas>Por favor usar Firefox</canvas>
-        
+        <form class="registro">
+            <header><h1>Registro</h1></header>
+            <ul>
+                <li>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" pattern="\w{5,90}" id="nombre" required>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </li>
+                <li>
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" required oninput="checkPass();">
+                </li>
+                <li>
+                    <label for="pass2">Confirm Password</label>
+                    <input type="password" id="pass2" oninput="checkPass();" required>
+                </li>
+            </ul>
+            <button id="submit">¡Enviar!</button>
+        </form>
+        <canvas width="800" height="450">Por favor usar Firefox</canvas>
     </body>
 </html>
