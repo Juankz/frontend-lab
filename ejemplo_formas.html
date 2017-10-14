@@ -1,40 +1,43 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta lang="es">
         <title>Ejemplo de formas</title>
         <link rel="stylesheet" href="css/formas.css">
-        <script>
-            function checkPass(){
-                var pass1 = document.getElementById("pass");
-                var pass2 = document.getElementById("pass2");
-                console.log(pass1.value == pass2.value);
-                return pass1.value == pass2.value;                
-            }
-        </script>
     </head>
     <body>
         <form class="registro">
             <header><h1>Registro</h1></header>
             <ul>
                 <li>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" pattern="\w{5,90}" id="nombre" required>
+                    <label for="nombre">Nombre <span class="req">*</span> </label>
+                    <input type="text" pattern="[A-Za-zÀ-ž\s]{5,90}" id="nombre" required name="user_name" autofocus="true">
                 </li>
                 <li>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required>
+                    <label for="email">Email <span class="req">*</span></label>
+                    <input type="email" id="email" name="user_email" required>
                 </li>
                 <li>
-                    <label for="pass">Password</label>
-                    <input type="password" id="pass" required oninput="checkPass();">
+                    <label for="pass">Contraseña <span class="req">*</span></label>
+                    <!-- An <input> element with type="password" that must contain 8 or more characters that are of at least one number, and one uppercase and lowercase letter -->
+                    <input type="password" id="pass" required oninput="checkPass();" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" name="user_pass" title="8 caracteres, minimo 1 mayuscula y 1 numero">
                 </li>
                 <li>
-                    <label for="pass2">Confirm Password</label>
+                    <label for="pass2">Confirmar Contraseña <span class="req">*</span></label>
                     <input type="password" id="pass2" oninput="checkPass();" required>
                 </li>
             </ul>
             <button id="submit">¡Enviar!</button>
         </form>
-        <canvas width="800" height="450">Por favor usar Firefox</canvas>
+        <footer>
+            <h3>RECURSOS UTILES</h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Documentación de Mozilla</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://www.w3.org/WAI/tutorials/forms/grouping/">Agrupación por W3C</a></li>
+            </ul>
+        </footer>
+        <script type="text/javascript" src="js/forms.js"></script>
     </body>
 </html>

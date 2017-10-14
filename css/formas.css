@@ -5,8 +5,9 @@ body, html{
 body {
     padding: 1rem;
     vertical-align: middle;
+    font: 16px serif;
 }
-ul{
+.registro ul{
     list-style: none;
     list-style-position: inside;
     vertical-align: top;
@@ -19,9 +20,10 @@ ul{
 label{
     position: relative;
     display: inline-block;
-    width: 8em;
+    width: 10em;
     padding: 10px;
     text-align: left;
+    cursor: pointer;
 }
 li input{
     background: white;
@@ -30,7 +32,7 @@ li input{
     border-radius: 5px;
     padding: 5px;
     padding-left: 10px;
-    width: 16em;
+    width: 175px;
 }
 li input:required:valid{
     border-color: #1cb700;
@@ -40,9 +42,13 @@ li input:required:invalid{
     border-color: red;
     box-shadow: 0px 0px 5px red;
 }
-li input:focus{
-    border-color: darkcyan!important;
-    box-shadow: 0 0 5px darkcyan !important;
+li input:required:focus:invalid{
+    border-color: darkcyan;
+    box-shadow: 0 0 5px darkcyan;
+}
+li input:required:focus:valid{
+    border-color: #1cb700;
+    box-shadow: 0 0 5px #1cb700;
 }
 canvas{
     background: white;
@@ -51,17 +57,31 @@ canvas{
 .registro{
     background: #21b7f2;
     text-align: center;
-    width: 25rem;
-    height: 18rem;
+    max-width: 27rem;
+    min-height: 18rem;
     border: 2px solid white;
     border-radius: 5px;
     padding: 0;
     padding-top: 0;
     margin: auto auto;
-    position: absolute;
-    top:calc(50vh - 9rem);
-    left: 35%;
+    margin-top:calc(50vh - 12rem);
     box-shadow: 0 10px 20px;
+    animation: 0.5s cubic-bezier(.18,.89,.49,1.47) 0s revelar;
+}
+.req{
+    color: red;
+    font-weight: bolder;
+}
+
+@keyframes revelar{
+    0%{
+        opacity: 0;
+        margin-top: calc(50vh - 7rem);
+    }
+    100%{
+        opacity: 1;
+        margin-top: calc(50vh - 12rem);
+    }
 }
 
 .registro h1{
@@ -69,28 +89,40 @@ canvas{
     margin: 0;
     padding: 10px;
     margin-bottom: 20px;
-    border-radius: 5px;
-    
-   
+    border-radius: 5px;   
 }
 
 .registro button{
     background: #ffffff;
     color: black;
-    /*! background: #17d8a5; */
+    /*! background: #e6fb5b; */
     padding: 5px;
     width: 50%;
-    border: #17d8a5 2px solid;
+    border: #d7f800 2px solid;
     border-radius: 5px;    
     font-weight: bold;
     margin-bottom: 10px;
     transition: all 0.25s ease-out;
     transition: box-shadow 0;
 }
-.registro button:hover{
-    background: #17d8a5;
+.registro button:hover , .registro button:focus{
+    background: #d7f800;
 }
 
 .registro button:active{
     box-shadow: 0 3px 3px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul li{
+    line-height: 0;
+}
+
+a:visited{
+    color: #222222;
 }
